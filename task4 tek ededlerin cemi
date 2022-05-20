@@ -1,0 +1,33 @@
+using System;
+namespace task4
+{
+    class sumOfEvenNumbers
+    {
+        static void Main(string[] args)
+        {
+            int sum = 0;
+            Console.Write("ilk ededi daxil edin: ");
+            int fromNumber = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("ikinci ededi daxil edin: ");
+            int toNumber = Convert.ToInt32(Console.ReadLine());
+
+            if (fromNumber < toNumber)
+            {
+                for (int i = fromNumber; i < toNumber; i++)
+                {
+                    if (i % 2 == 1)
+                        sum += i;
+                }
+
+                Console.Write($"Tek edelerin cemi"+ sum);
+            }
+            else
+            {
+                Console.Write("yanlish eded daxil etmisiniz: ");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
